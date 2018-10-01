@@ -52,6 +52,7 @@ func LoadConfig(config *Config, ctx argumentContext) error {
 
 	exist, err := configExists(configFile)
 	if err != nil {
+		fmt.Println("testing testing")
 		return err
 	}
 	if exist {
