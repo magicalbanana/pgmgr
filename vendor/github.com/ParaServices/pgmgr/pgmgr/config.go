@@ -48,11 +48,12 @@ type Config struct {
 func LoadConfig(config *Config, ctx argumentContext) error {
 	// load configuration from file first; then override with
 	// flags or env vars if they're present.
+	fmt.Println("debug 1")
 	configFile := ctx.String("config-file")
+	fmt.Println("debug 2")
 
 	exist, err := configExists(configFile)
 	if err != nil {
-		fmt.Println("testing testing")
 		return err
 	}
 	if exist {
